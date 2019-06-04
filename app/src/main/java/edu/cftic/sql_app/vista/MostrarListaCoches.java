@@ -6,8 +6,10 @@ import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.View;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 import edu.cftic.sql_app.AdapterCoches;
 import edu.cftic.sql_app.R;
@@ -44,8 +46,25 @@ recView = (RecyclerView) findViewById(R.id.recview);
 
 
 
+    }
 
+    public void ordenarPorId(View view) {
 
+        Log.d("MIAPP","ORDENANDO POR ID");
+        Collections.sort(datos, new ComparadorCoches());
+        //repintar
+        // adapterCoche = new AdapterCoche(lista_coches);
+        // recyclerView.setAdapter(adapterCoche);
+        //repintar PEREA
+        adaptador.notifyDataSetChanged();
+    }
+
+    public void ordenarPorModelo(View view) {
+
+        Log.d("MIAPP","ORDENANDO POR MODELO");
+        Collections.sort(datos);
+        adaptador = new AdapterCoches(datos);
+        recView.setAdapter(adaptador);
     }
 
 
