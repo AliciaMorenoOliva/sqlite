@@ -1,5 +1,6 @@
 package edu.cftic.sql_app;
 
+import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,7 +23,7 @@ public class AdapterCoches extends RecyclerView.Adapter<CocheViewHolder> {
     //aqui estoy creando cada elemento de la vista
 
     @Override
-    public CocheViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public CocheViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         CocheViewHolder cocheViewHolder = null;
 
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
@@ -36,7 +37,7 @@ public class AdapterCoches extends RecyclerView.Adapter<CocheViewHolder> {
 
     //Al holder, le meto la info de coche que toca
     @Override
-    public void onBindViewHolder(CocheViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull CocheViewHolder holder, int position) {
 
         Coche coche = datos.get(position);
         holder.cargarCocheEnHolder(coche);

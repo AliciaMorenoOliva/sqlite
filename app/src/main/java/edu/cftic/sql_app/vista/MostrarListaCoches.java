@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 
 import java.util.ArrayList;
 
@@ -29,12 +30,14 @@ public class MostrarListaCoches extends AppCompatActivity {
         this.baseDatosCochesPersona = new BaseDatosCochesPersona(this, "MiDB", null, 1);
 
 
+recView = (RecyclerView) findViewById(R.id.recview);
 
         datos = (ArrayList<Coche>) baseDatosCochesPersona.buscarCoches();
         adaptador = new AdapterCoches(datos);
+        Log.d("MIAPP","" + datos);
         recView.setAdapter(adaptador);
 
-        //TODO error en linea 35
+
 
         recView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL , false)) ; //estamos cargando los datos en cada linea
         recView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));//

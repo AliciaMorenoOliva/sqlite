@@ -2,13 +2,38 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mostrarlistacoches"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".vista.MostrarListaCoches">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/RecView"
+    <LinearLayout
+        android:id="@+id/lyidmodelo"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="-16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="ID" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="MODELO" />
+
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/lyidmodelo"
+        app:layout_constraintTop_toTopOf="@id/lyidmodelo" />
 
 </android.support.constraint.ConstraintLayout>

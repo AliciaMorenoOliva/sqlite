@@ -11,7 +11,7 @@
     >
 
 
-    <TextView android:id="@+id/LblId"
+    <TextView android:id="@+id/lblid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
@@ -19,7 +19,7 @@
 
         />
 
-    <TextView android:id="@+id/LblModelo"
+    <TextView android:id="@+id/lblmodelo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="normal"

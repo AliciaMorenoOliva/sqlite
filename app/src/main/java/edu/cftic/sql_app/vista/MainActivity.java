@@ -36,9 +36,14 @@ public class MainActivity extends AppCompatActivity {
 
         new BaseDatosCochesPersona(this,"MIDB",null,1);
 
-        Persona persona1 = new Persona(1, "Juan");
-        Persona persona2 = new Persona(2, "Conchi");
-        Persona persona3 = new Persona(3, "Manolo");
+       // Persona persona1 = new Persona(1, "Juan");
+       // Persona persona2 = new Persona(2, "Conchi");
+       // Persona persona3 = new Persona(3, "Manolo");
+
+        Persona persona1 = new Persona( "Juan");
+        Persona persona2 = new Persona( "Conchi");
+        Persona persona3 = new Persona( "Manolo");
+
 
         //inserto las personas
         baseDatosCochesPersona.insertarPersona(persona1);
