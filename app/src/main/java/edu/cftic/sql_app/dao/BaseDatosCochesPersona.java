@@ -56,7 +56,7 @@ public class BaseDatosCochesPersona extends SQLiteOpenHelper {
     {
 
         SQLiteDatabase database = this.getWritableDatabase();
-        database.execSQL("INSERT INTO PERSONA (id, nombre) VALUES ("+ persona.getId()+" , '"+ persona.getNombre()+"')");
+        database.execSQL("INSERT INTO PERSONA ( nombre) VALUES (  "+ persona.getNombre()+"')");
         this.cerrarBaseDatos(database);
 
     }
